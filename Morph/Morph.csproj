@@ -1,7 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Version>1.0.1</Version>
+    <Company>mrousavy</Company>
+    <Authors>mrousavy</Authors>
+    <Description>A fast .NET Standard Class Library for parsing results from an SQL query to .NET objects</Description>
+    <PackageLicenseUrl>https://github.com/mrousavy/Morph/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mrousavy/Morph</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mrousavy/Morph</RepositoryUrl>
+    <RepositoryType>Open Source</RepositoryType>
+    <PackageTags>parser, sql, csharp, dotnet, library</PackageTags>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
 </Project>
