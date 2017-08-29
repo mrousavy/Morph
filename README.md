@@ -8,13 +8,15 @@
   </p>
 </p>
 
-# Why?
+## Why?
 
 The default **hardcode-index-way** of creating objects from a _reader_ can be really messy for _large objects_ with _many columns_.
 
+**Morph** aims to _simplify_ this process by **only needing a single line of code** to parse Data Reader results, and by making code bases **easily extensible** with the `ColumnName` Attributes.
+
 A _small_ example:
 ```cs
-if(await reader.ReadAsync()) {
+if (await reader.ReadAsync()) {
   var person = new Person() {
     FirstName = reader["PERSON_FIRST_NAME"],
     LastName = reader["PERSON_LAST_NAME"],
@@ -23,20 +25,21 @@ if(await reader.ReadAsync()) {
 }
 ```
 
-With **Morph**:
+With **Morph**'s extension Method:
 ```cs
 var person = await reader.Parse<Person>();
 ```
+(Requires a `using` directive to the `mrousavy.Morph` namespace)
 
 Keep in mind to mark the Members you want to parse with the `ColumnName` Attribute in `Person`:
 ```cs
 public class Person {
   [ColumnName("PERSON_FIRST_NAME")]
-  public string FirstName { get; set; } //Will be set to "PERSON_FIRST_NAME" (ColumnName parameter) from the DataBase
+  public string FirstName { get; set; }   // Will be set to "PERSON_FIRST_NAME" (ColumnName parameter) from the DataBase
 
   [ColumnName()]
-  public string LastName { get; set; } //Will be set to "LastName" (Member name) from the DataBase
+  public string LastName { get; set; }    // Will be set to "LastName" (Member name) from the DataBase
 
-  public string Address { get; set; } //Will be ignored and not initialized by the Parser
+  public string Address { get; set; }     // Will be ignored and not initialized by the Parser
 }
 ```
