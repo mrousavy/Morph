@@ -44,5 +44,5 @@ public class Person {
 }
 ```
 
-## build
+## Build
 Build with [.NET Core](https://www.microsoft.com/net/download/core) 2.0 or higher
