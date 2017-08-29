@@ -14,9 +14,9 @@ namespace Morph.Tests {
         private IDataReader Reader { get; set; }
 
         private const string SqlServer = "VIE-VMRO-Win10";
-        private const string SqlDatabase = "SPI_ADMIN";
-        private const string SqlUser = "SPI_DBAMN";
-        private const string SqlPass = "SPI_DBA";
+        private const string SqlDatabase = "DATABASE";
+        private const string SqlUser = "USER";
+        private const string SqlPass = "PASSWORD";
 
         [TestInitialize]
         public void Initialize() {
