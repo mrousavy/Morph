@@ -9,7 +9,7 @@ namespace mrousavy.Morph {
     public class ColumnNameAttribute : Attribute {
         public string Name { get; }
 
-        public ColumnNameAttribute(string name) {
+        public ColumnNameAttribute([System.Runtime.CompilerServices.CallerMemberName] string name = null) {
             Name = name;
         }
     }
