@@ -10,7 +10,7 @@
 
 ## Why?
 
-The default **hardcode-index-way** of creating objects from a _reader_ can be really messy for _large objects_ with _many columns_.
+The default **hardcode-index-way** of creating objects from a _Data Reader_ can be really messy for _large objects_ with _many columns_.
 
 **Morph** aims to _simplify_ this process by **only needing a single line of code** to parse Data Reader results, and by making code bases **easily extensible** with the `ColumnName` Attributes.
 
@@ -29,9 +29,9 @@ With **Morph**'s extension Method:
 ```cs
 var person = await reader.Parse<Person>();
 ```
-(Requires a `using` directive to the `mrousavy.Morph` namespace)
+_(Requires a `using` directive to the `mrousavy.Morph` namespace)_
 
-Keep in mind to mark the Members you want to parse with the `ColumnName` Attribute in `Person`:
+Keep in mind to **mark the Members** you want to parse with the `ColumnName` Attribute in `Person`:
 ```cs
 public class Person {
   [ColumnName("PERSON_FIRST_NAME")]
@@ -43,3 +43,6 @@ public class Person {
   public string Address { get; set; }     // Will be ignored and not initialized by the Parser
 }
 ```
+
+## build
+Build with [.NET Core](https://www.microsoft.com/net/download/core) 2.0 or higher
