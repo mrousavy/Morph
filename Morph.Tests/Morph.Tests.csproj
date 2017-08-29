@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -11,6 +12,8 @@
     <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
     <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.4.1" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

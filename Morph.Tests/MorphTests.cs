@@ -13,14 +13,16 @@ namespace Morph.Tests {
         private SqlConnection Connection { get; set; }
         private IDataReader Reader { get; set; }
 
-        private const string SqlServer = "";
-        private const string SqlDatabase = "";
-        private const string SqlUser = "";
-        private const string SqlPass = "";
+        private const string SqlServer = "VIE-VMRO-Win10";
+        private const string SqlDatabase = "SPI_ADMIN";
+        private const string SqlUser = "SPI_DBAMN";
+        private const string SqlPass = "SPI_DBA";
 
         [TestInitialize]
         public void Initialize() {
             Connection = new SqlConnection($"Server={SqlServer};Database={SqlDatabase};User ID={SqlUser};Password={SqlPass}"); //MSSQL
+            Connection.Open();
+
             //Fire command
             using (IDbCommand command = new SqlCommand("SELECT * FROM Person;", Connection)) {
                 Reader = command.ExecuteReader();

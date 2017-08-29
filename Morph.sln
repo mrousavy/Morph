@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morph", "Morph\Morph.csproj", "{DADF484C-5D2A-48E8-BD0D-21310977409C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morph.Tests", "Morph.Tests\Morph.Tests.csproj", "{5D1804B4-66A1-4A0D-94A1-48C4049987A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morph.Tests", "Morph.Tests\Morph.Tests.csproj", "{5D1804B4-66A1-4A0D-94A1-48C4049987A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
