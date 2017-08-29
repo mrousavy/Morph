@@ -10,7 +10,7 @@ namespace mrousavy.Morph {
     /// <summary>
     /// Internal static class for parsing Values from 
     /// a Data Reader (<see cref="IDataReader"/>, <see cref="DbDataReader"/>)
-    /// to managed .NET objects via reflecting on <see cref="ColumnName"/> attributes.
+    /// to managed .NET objects via reflecting on <see cref="ColumnNameAttribute"/> attributes.
     /// </summary>
     public static class Parser {
 

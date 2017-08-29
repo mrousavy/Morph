@@ -14,7 +14,7 @@ namespace mrousavy.Morph {
         /// <summary>
         /// Asynchronously parses values from this <see cref="IDataReader"/>
         /// to a managed .NET object <see cref="T"/> where Properties of <see cref="T"/> must be public and flagged
-        /// with the <see cref="ColumnName"/> attribute.
+        /// with the <see cref="ColumnNameAttribute"/> attribute.
         /// </summary>
         public static async Task<T> ParseAsync<T>(this IDataReader @this) {
             if(@this == null) throw new ArgumentNullException(nameof(@this)); //check parameter
@@ -28,7 +28,7 @@ namespace mrousavy.Morph {
         /// <summary>
         /// Parses values from this <see cref="IDataReader"/>
         /// to a managed .NET object <see cref="T"/> where Properties of <see cref="T"/> must be public and flagged
-        /// with the <see cref="ColumnName"/> attribute.
+        /// with the <see cref="ColumnNameAttribute"/> attribute.
         /// </summary>
         public static T Parse<T>(this IDataReader @this) {
             if (@this == null) throw new ArgumentNullException(nameof(@this)); //check parameter
