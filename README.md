@@ -37,8 +37,8 @@ public class Person {
   [ColumnName("PERSON_FIRST_NAME")]
   public string FirstName { get; set; }   // Will be set to "PERSON_FIRST_NAME" (ColumnName parameter) from the DataBase
 
-  [ColumnName()]
-  public string LastName { get; set; }    // Will be set to "LastName" (Member name) from the DataBase
+  [ColumnName]
+  public string LastName { get; set; }    // Will be set to "LastName" (Member name) from the Database
 
   public string Address { get; set; }     // Will be ignored and not initialized by the Parser
 }
