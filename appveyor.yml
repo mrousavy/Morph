@@ -1,0 +1,31 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Release
+dotnet_csproj:
+  patch: true
+  file: Morph\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+cache:
+  - packages -> **\packages.config
+
+before_build:
+- cmd: >-
+    dotnet restore
+
+    nuget restore
+build:
+  verbosity: minimal
+after_build:
+- cmd: >-
+    dotnet pack Morph\Morph.csproj
+
+artifacts:
+  - path: Morph\bin\$(configuration)\*.nupkg
+    name: NupkgArtifact
+deploy:
+  provider: NuGet
+  api_key:
+    secure: vc7rUEW84l4OwcpHh3cb+8CeSfkYRwzp7h1VFjfHeMtYve2r0erWtueexTARgvxr
+  skip_symbols: true
+  artifact: /.*\.nupkg/
