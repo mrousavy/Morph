@@ -16,13 +16,13 @@ namespace mrousavy.Morph {
         /// to a managed .NET object <see cref="T"/> where Properties of <see cref="T"/> must be public and flagged
         /// with the <see cref="ColumnNameAttribute"/> attribute.
         /// </summary>
-        public static async Task<T> ParseAsync<T>(this IDataReader @this) {
+        public static Task<T> ParseAsync<T>(this IDataReader @this) {
             if(@this == null) throw new ArgumentNullException(nameof(@this)); //check parameter
             
             //if no DbDataReader object -> throw
             if (!(@this is DbDataReader reader)) throw new ArgumentException(nameof(@this));
             
-            return await Parser.ParseAsync<T>(reader); //actually parse
+            return Parser.ParseAsync<T>(reader); //actually parse
         }
 
         /// <summary>
