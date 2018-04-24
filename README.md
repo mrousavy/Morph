@@ -6,6 +6,7 @@
     <a href="http://nuget.org/packages/Morph/"><img src="https://img.shields.io/badge/nuget-Morph-blue.svg" alt="Morph on NuGet"></a>
     <a href="https://ci.appveyor.com/project/mrousavy/morph"><img src="https://ci.appveyor.com/api/projects/status/k6dd0rtskfjxrw4o?svg=true" alt="Morph build status"></a>
   </p>
+  <a href='https://ko-fi.com/F1F8CLXG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
 
 ## Why?
